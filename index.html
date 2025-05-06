@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flight Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="hud">
+            <div id="speed">Speed: <span id="speed-value">0</span> km/h</div>
+            <div id="altitude">Altitude: <span id="altitude-value">0</span> m</div>
+            <div id="model-toggle">
+                <button id="toggle-model">Switch Model (Simple/3D)</button>
+            </div>
+        </div>
+        <div id="instructions">
+            <h2>Flight Controls:</h2>
+            <ul>
+                <li>W / S - Pitch down/up</li>
+                <li>A / D - Roll left/right</li>
+                <li>Q / E - Yaw left/right</li>
+                <li>Shift - Increase throttle</li>
+                <li>Ctrl - Decrease throttle</li>
+                <li>R - Reset position</li>
+                <li>Space - Toggle camera view</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Three.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/STLLoader.js"></script>
+    
+    <!-- Game scripts -->
+    <script src="js/airplane.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
